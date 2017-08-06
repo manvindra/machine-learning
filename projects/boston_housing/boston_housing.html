@@ -12128,7 +12128,8 @@ Low PTRATiO can means less student with each teacher means good school,also mean
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> 92.3% of variation is captured but we dont know if its overfitting. We should know how our model has performed in CV or Testing dataset. Since our datapoint are very less,we may have less training error. Because of these reason we can't says that it has SUCCESSFULLY captured the variation.</p>
+<p><strong>Answer:</strong> New Submission: Yes, solely based on R2 in this model, we can say model has successfully captured the variation(92.3%) of the target variable.</p>
+<p>Previous submission:92.3% of variation is captured  but we dont know if its overfitting. We should know how our model has performed in CV or Testing dataset. Since our datapoint are very less,we may have less training error. Because of these reason we can't says that it has SUCCESSFULLY captured the variation.</p>
 
 </div>
 </div>
@@ -13296,7 +13297,7 @@ Think about the pros and cons of adding more training points based on if the tra
 <p><strong>Answer: </strong></p>
 <ol>
 <li>Maximum Depth of model should be 3.Both testing and training score are converging and are higher than max_depth=1</li>
-<li>More trainings point may not alter the training scores much as the model has already adapt to large training data points. Similar with testing curve. More training points may not benefit the model.</li>
+<li>Initally with less number of training data, model make high training error and high Testing error. As we increase the training data, model tends to do well in training score and testing score upto a certain point. After which more trainings point may not alter the training scores much as the model has already adapt to large training data points. Similar with testing curve(optimal score reached). More training points may not benefit the model.</li>
 </ol>
 
 </div>
@@ -13896,7 +13897,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -13918,7 +13919,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
     
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)}</span>
 
     <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
@@ -13965,7 +13966,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14002,7 +14003,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Hint: </strong> The answer comes from the output of the code snipped above.</p>
-<p><strong>Answer: </strong> Parameter 'max_depth' is 4 for the optimal model.</p>
+<p><strong>Answer: </strong> Parameter 'max_depth' is 4 for the optimal model.This model has better validation score than max_depth=3 and it does reach a optimum. This model is little more complex. Training score remain the same as max_depth=3.</p>
 
 </div>
 </div>
@@ -14054,14 +14055,14 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
 <span class="n">client_data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="c1"># Client 1</span>
                <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="c1"># Client 2</span>
                <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]</span>  <span class="c1"># Client 3</span>
-
+<span class="k">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span> <span class="c1">#Reviewer comments</span>
 <span class="c1"># Show predictions</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">client_data</span><span class="p">)):</span>
     <span class="k">print</span> <span class="s2">&quot;Predicted selling price for Client {}&#39;s home: ${:,.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
@@ -14079,7 +14080,16 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predicted selling price for Client 1&#39;s home: $415,800.00
+<pre>               RM       LSTAT     PTRATIO
+count  391.000000  391.000000  391.000000
+mean     6.250972   13.026880   18.527877
+std      0.660176    6.993304    2.124452
+min      3.561000    2.470000   12.600000
+25%      5.889500    7.535000   17.400000
+50%      6.176000   12.010000   19.100000
+75%      6.584500   17.135000   20.200000
+max      8.398000   37.970000   22.000000
+Predicted selling price for Client 1&#39;s home: $415,800.00
 Predicted selling price for Client 2&#39;s home: $236,478.26
 Predicted selling price for Client 3&#39;s home: $888,720.00
 </pre>
@@ -14096,10 +14106,16 @@ Predicted selling price for Client 3&#39;s home: $888,720.00
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
+They does seems reasonable.
 Predicted selling price for Client 1's home: $415,800.00
 Predicted selling price for Client 2's home: $236,478.26
-Predicted selling price for Client 3's home: $888,720.00
-They does seems reasonable. More rooms, less poverty and less student per teacher(Best schools) leading to high prices.</p>
+Predicted selling price for Client 3's home: $888,720.00</p>
+<ul>
+<li>Price Client 3 &gt; Client 1 &gt; Client 2</li>
+<li>RA Client 3 &gt; Client 1 &gt; Client 2 . More RA means more builtup area, more land , big house so high prices</li>
+<li>LSTAT Client 3 &lt; Client 1 &lt; Client 2. Low LSTAT may means(not always) better lifestyle/standard of living, less crimes.</li>
+<li>PTRAIO Client 3 &gt; Client 1 &gt; Client 2. Less PTRATIO means schools are better funded that implies more better education system in place, more facilities avialable. </li>
+</ul>
 
 </div>
 </div>
