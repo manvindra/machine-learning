@@ -12128,8 +12128,7 @@ Low PTRATiO can means less student with each teacher means good school,also mean
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> New Submission: Yes, solely based on R2 in this model, we can say model has successfully captured the variation(92.3%) of the target variable.</p>
-<p>Previous submission:92.3% of variation is captured  but we dont know if its overfitting. We should know how our model has performed in CV or Testing dataset. Since our datapoint are very less,we may have less training error. Because of these reason we can't says that it has SUCCESSFULLY captured the variation.</p>
+<p><strong>Answer:</strong> Model's coefficient of determination is 0.923. Model seems to have successfully captured the variation of target variable because only 7.7% variation of target variable is unknown. Close to 100% is considered good as a model with 100% of variance will have fitted values always equal the observed values.</p>
 
 </div>
 </div>
@@ -13297,7 +13296,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <p><strong>Answer: </strong></p>
 <ol>
 <li>Maximum Depth of model should be 3.Both testing and training score are converging and are higher than max_depth=1</li>
-<li>Initally with less number of training data, model make high training error and high Testing error. As we increase the training data, model tends to do well in training score and testing score upto a certain point. After which more trainings point may not alter the training scores much as the model has already adapt to large training data points. Similar with testing curve(optimal score reached). More training points may not benefit the model.</li>
+<li>Initally with less number of training data, model make low training error and High Testing error. As we increase the training data, model tends to do well in training score and testing score upto a certain point. After which more trainings point may not alter the training scores much as the model has already adapt to large training data points. Similar with testing curve(optimal score reached). More training points may not benefit the model.</li>
+<li>Initally, Training score decreases and  Testing score increase as more training data points are added.</li>
 </ol>
 
 </div>
