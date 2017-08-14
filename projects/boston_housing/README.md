@@ -1,3 +1,5 @@
+Project completed in Aug 2017
+
 # Machine Learning Engineer Nanodegree
 # Model Evaluation and Validation
 ## Project: Predicting Boston Housing Prices
