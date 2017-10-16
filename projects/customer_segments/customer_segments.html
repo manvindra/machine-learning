@@ -11996,6 +11996,19 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12115,12 +12128,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#Frozen</span>
 <span class="n">Fq4</span> <span class="o">=</span> <span class="mf">16933.7500</span>
-<span class="c1">#display(data.loc[data.Fresh &gt; Fq4, :].head(20))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">Fresh</span> <span class="o">&gt;</span> <span class="n">Fq4</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">39</span><span class="p">])</span> <span class="c1">#39: Q4 Fresh, Q1 Milk, Q1 Grocery, Q4 Frozen, Q1 Detergent, Q4 Delicatessen</span>
 </pre></div>
 
@@ -12131,6 +12144,225 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>22615</td>
+      <td>5410</td>
+      <td>7198</td>
+      <td>3915</td>
+      <td>1777</td>
+      <td>5185</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>31714</td>
+      <td>12319</td>
+      <td>11757</td>
+      <td>287</td>
+      <td>3881</td>
+      <td>2931</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>21217</td>
+      <td>6208</td>
+      <td>14982</td>
+      <td>3095</td>
+      <td>6707</td>
+      <td>602</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>24653</td>
+      <td>9465</td>
+      <td>12091</td>
+      <td>294</td>
+      <td>5058</td>
+      <td>2168</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18601</td>
+      <td>6327</td>
+      <td>10099</td>
+      <td>2205</td>
+      <td>2767</td>
+      <td>3181</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>17546</td>
+      <td>4519</td>
+      <td>4602</td>
+      <td>1066</td>
+      <td>2259</td>
+      <td>2124</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>31276</td>
+      <td>1917</td>
+      <td>4469</td>
+      <td>9408</td>
+      <td>2381</td>
+      <td>4334</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>26373</td>
+      <td>36423</td>
+      <td>22019</td>
+      <td>5154</td>
+      <td>4337</td>
+      <td>16523</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>22647</td>
+      <td>9776</td>
+      <td>13792</td>
+      <td>2915</td>
+      <td>4482</td>
+      <td>5778</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>43088</td>
+      <td>2100</td>
+      <td>2609</td>
+      <td>1200</td>
+      <td>1107</td>
+      <td>823</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>18815</td>
+      <td>3610</td>
+      <td>11107</td>
+      <td>1148</td>
+      <td>2134</td>
+      <td>2963</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>21632</td>
+      <td>1318</td>
+      <td>2886</td>
+      <td>266</td>
+      <td>918</td>
+      <td>405</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>29729</td>
+      <td>4786</td>
+      <td>7326</td>
+      <td>6130</td>
+      <td>361</td>
+      <td>1083</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>29955</td>
+      <td>4362</td>
+      <td>5428</td>
+      <td>1729</td>
+      <td>862</td>
+      <td>4626</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>56159</td>
+      <td>555</td>
+      <td>902</td>
+      <td>10002</td>
+      <td>212</td>
+      <td>2916</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>24025</td>
+      <td>4332</td>
+      <td>4757</td>
+      <td>9510</td>
+      <td>1145</td>
+      <td>5864</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>19176</td>
+      <td>3065</td>
+      <td>5956</td>
+      <td>2033</td>
+      <td>2575</td>
+      <td>2802</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>44466</td>
+      <td>54259</td>
+      <td>55571</td>
+      <td>7782</td>
+      <td>24171</td>
+      <td>6465</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>40721</td>
+      <td>3916</td>
+      <td>5876</td>
+      <td>532</td>
+      <td>2587</td>
+      <td>1278</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>27329</td>
+      <td>1449</td>
+      <td>1947</td>
+      <td>2436</td>
+      <td>204</td>
+      <td>1333</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
 
 <div class="output_area">
 <div class="prompt"></div>
@@ -12155,12 +12387,12 @@ Name: 39, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#MILK</span>
 <span class="n">Mq4</span> <span class="o">=</span> <span class="mf">7190.250000</span>
-<span class="c1"># display(data.loc[((data.Milk &gt; Mq4) &amp; (data.Frozen &lt; Fq4)) , :].head(20))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[((</span><span class="n">data</span><span class="o">.</span><span class="n">Milk</span> <span class="o">&gt;</span> <span class="n">Mq4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Frozen</span> <span class="o">&lt;</span> <span class="n">Fq4</span><span class="p">))</span> <span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">28</span><span class="p">])</span> <span class="c1">#28: High Milk, low Fresh, low Frozen, High Detergent</span>
 </pre></div>
 
@@ -12171,6 +12403,153 @@ Name: 39, dtype: int64</pre>
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12669</td>
+      <td>9656</td>
+      <td>7561</td>
+      <td>214</td>
+      <td>2674</td>
+      <td>1338</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>7057</td>
+      <td>9810</td>
+      <td>9568</td>
+      <td>1762</td>
+      <td>3293</td>
+      <td>1776</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6353</td>
+      <td>8808</td>
+      <td>7684</td>
+      <td>2405</td>
+      <td>3516</td>
+      <td>7844</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9413</td>
+      <td>8259</td>
+      <td>5126</td>
+      <td>666</td>
+      <td>1795</td>
+      <td>1451</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>6006</td>
+      <td>11093</td>
+      <td>18881</td>
+      <td>1159</td>
+      <td>7425</td>
+      <td>2098</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>31714</td>
+      <td>12319</td>
+      <td>11757</td>
+      <td>287</td>
+      <td>3881</td>
+      <td>2931</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>24653</td>
+      <td>9465</td>
+      <td>12091</td>
+      <td>294</td>
+      <td>5058</td>
+      <td>2168</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>1020</td>
+      <td>8816</td>
+      <td>12121</td>
+      <td>134</td>
+      <td>4508</td>
+      <td>1080</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>26373</td>
+      <td>36423</td>
+      <td>22019</td>
+      <td>5154</td>
+      <td>4337</td>
+      <td>16523</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>22647</td>
+      <td>9776</td>
+      <td>13792</td>
+      <td>2915</td>
+      <td>4482</td>
+      <td>5778</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>4113</td>
+      <td>20484</td>
+      <td>25957</td>
+      <td>1158</td>
+      <td>8604</td>
+      <td>5206</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>15168</td>
+      <td>10556</td>
+      <td>12477</td>
+      <td>1920</td>
+      <td>6506</td>
+      <td>714</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
 
 <div class="output_area">
 <div class="prompt"></div>
@@ -12325,18 +12704,23 @@ Name: 28, dtype: int64</pre>
 In Sample,</p>
 <p>Index 0</p>
 <ul>
+<li>Milk,Grocery,Detergent spending is in Fourth Quartile. Very high from the mean.</li>
 <li>Low in Fresh, Medium Frozen.</li>
 <li>High in Milk, Grocery, Detergents_Paper, Delicatessen.</li>
 <li><strong>Wholesale retailers</strong>: High Spending and doesn't keep easy perishable item.</li>
 </ul>
 <p>Index 1:</p>
 <ul>
+<li>Milk,Grocery,Detergent spending is in First Quartile</li>
+<li>Frozen,Delicatessen,Fresh spending is in Fourth Quartile</li>
 <li>High in Fresh, Frozen and Delicatessen</li>
 <li>Low in Grocery, Detergents_Paper and Milk</li>
 <li><strong>delis</strong>: Restaurent purchasing large amount of Deliscatessen,Frozen,Fresh Item and using less grocery items.Prepare fresh delicacies. </li>
 </ul>
 <p>Index 2:</p>
 <ul>
+<li>Fresh,Frozen,Detergent spending is in First Quartile, </li>
+<li>Milk,Grocery spending is in Fourth Quartile</li>
 <li>Low in Fresh, Frozen and Delicatessen</li>
 <li>High in Grocery, Detergents_Paper and Milk</li>
 <li><strong>Cafe</strong>: Serving drink mostly containing milk like tea,coffee with some fast food or ready made food.</li>
@@ -15403,7 +15787,7 @@ hBAOSEKgEEIIIYQDkhAohBBCCOGA/j/U+kINAXg90gAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li>As seen from scatter plot, data is not normally distributed for any of the feature. All of them are left skewed, as most of the data points are near 0. Each features contains outlier thats what making the plot highly skewed as seen from KDE plot.From violin plot, we can see Fresh has greatest variation,Delicatessen has least variation. </li>
+<li>As seen from scatter plot, data is not normally distributed for any of the feature. All of them are right skewed, as most of the data points are near 0. Each features contains outlier thats what making the plot highly skewed as seen from KDE plot.From violin plot, we can see Fresh has greatest variation,Delicatessen has least variation. </li>
 </ol>
 <ol>
 <li><p>Grocery has a high correlation(0.92) with Detergents Paper. Also seen 0.73 Pearson correlation between grocery and milk. Milk also has correlation (0.66) with Detergents Paper but not that strong.</p>
@@ -21228,7 +21612,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>5 are considered outlier for more than one feature. Their indices are [66,338,142,154,289]</li>
+<li>5 are considered outlier for more than one feature. Their indices are [54,65,66,128,75]</li>
 <li>They should be removed from the dataset. They are considered as outlier in multiple feature. </li>
 <li>In K-means, we look at the distance between each point and centroid. If outlier is very far away, K-means will try to minimise the loss function by moving the centroid toward the outlier or make the outlier as centroid. That will not be represenative of underlying distriution</li>
 </ul>
@@ -21726,19 +22110,19 @@ Name: Explained Variance, dtype: float64</pre>
 <li>71.17% explained in total by the First and Second Principal Component</li>
 <li>93.23% explained in total by the First Four Principal Component</li>
 <li>Dimension 1: First principal component<ul>
-<li>Increases with decrease in Grocery, Milk and detergent paper. These feature well represent Dimension 1. We have found out earlier that Grocery is correlated with Milk and Detergent Paper.</li>
+<li>Grocery, Milk and detergent paper have relatively high negative weights so these feature well represent Dimension 1. Decrease of these will lead to positive increase of Dimension 1. We have found out earlier that Grocery is correlated with Milk and Detergent Paper. </li>
 </ul>
 </li>
 <li>Dimension 2: <ul>
-<li>Increases with large decrease in Fresh, Frozen and Delicatessen. These feature best represent Dimension2 . Feature in Dimension 1 has very small weight in Dimension 2 as they should be</li>
+<li>Fresh, Frozen and Delicatessen have relatively high weights so these feature best represent Dimension2 . Decrease of these will lead to positive increase of Dimension 2. Feature in Dimension 1 has very small weight in Dimension 2 as they should be.</li>
 </ul>
 </li>
 <li>Dimension 3:<ul>
-<li>Increases with large decrease in Fresh and Large increase in Delicatessen. These feature best represent Dimension 3. </li>
+<li>Fresh have relatively high negative weights and Delicatessen have relatively high positive weights. These feature best represent Dimension 3. Increase in Delicatessesn and Decrease in Fresh spending will have positive increase in Dimension 3.</li>
 </ul>
 </li>
-<li>Dimesnion 4: <ul>
-<li>Increases with large increase in Frozen. Also increase in PCA 4 is associated with significant decrease in Fresh and Delicatessen. 'Frozen', 'Fresh' and 'Delicatessen' best represent PCA4.</li>
+<li>Dimension 4: <ul>
+<li>Frozen have relatively high positive weights.'Delicatessen' have relatively high negative weights. 'Frozen', 'Fresh' and 'Delicatessen' best represent PCA4. Decrease in Delicatessen and Increase in Frozen will have positive increase in Dimension 4</li>
 </ul>
 </li>
 </ul>
