@@ -87,7 +87,7 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
 
-        maxQ = max(self.Q[state].items(), key=lambda x: x[1])[1]
+        maxQ = max(self.Q[state].values())
   
         return maxQ
 
@@ -127,12 +127,9 @@ class LearningAgent(Agent):
           if self.epsilon > random.random():
              action = random.choice(self.valid_actions)
           else:
-             valid_actions = []
-             maxQ = self.get_maxQ(state)
-             for act in self.Q[state]:
-				if maxQ == self.Q[state][act]:
-					valid_actions.append(act)
-             action = random.choice(valid_actions)
+             best_actions = []
+             best_actions = [action for action in self.valid_actions if self.Q[state][action] == self.get_maxQ(state)]
+             action = random.choice(best_actions)
         else:
             action = random.choice(self.valid_actions)
         return action
